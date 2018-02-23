@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import IndexPage from './components/IndexPage';
-import Axios from 'axios';
+import AddHospital from './components/AddHospital';
 import './App.css';
 
 class App extends Component {
@@ -14,7 +14,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Route path="/" component={IndexPage} />
+        <Route exact path="/" component={IndexPage} />
+        <Route exact path="/add" component={AddHospital} />
       </div>
     );
   }
